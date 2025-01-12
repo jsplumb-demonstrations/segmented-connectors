@@ -2,13 +2,11 @@
 import {
     ready,
     newInstance,
-    AbsoluteLayout,
     SegmentedConnector,
     EdgePathEditor,
     EVENT_TAP,
     initializeSegmentedConnectorEditors,
     AnchorLocations,
-    BlankEndpoint,
     EVENT_CANVAS_CLICK,
     ArrowOverlay
 } from "@jsplumbtoolkit/browser-ui"
@@ -34,8 +32,8 @@ ready(() => {
                         {"x":197,"y":-7}
                     ],
                     "source":{
-                        "curX":72,
-                        "curY":56,
+                        "curX":50,
+                        "curY":45,
                         "x":1,
                         "y":0.5,
                         "ox":1,
@@ -43,7 +41,7 @@ ready(() => {
                     },
                     "target":{
                         "curX":350,
-                        "curY":56,
+                        "curY":45,
                         "x":0,
                         "y":0.5,
                         "ox":-1,
@@ -59,15 +57,11 @@ ready(() => {
 
     const renderOptions = {
         zoomToFit:true,
-        layout:{
-            type:AbsoluteLayout.type
-        },
         defaults:{
             connector:{
                 type:SegmentedConnector.type
             },
-            anchor:AnchorLocations.AutoDefault,
-            endpoint:BlankEndpoint.type
+            anchor:AnchorLocations.AutoDefault
         },
         view:{
             nodes:{
