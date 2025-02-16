@@ -2,16 +2,13 @@
 import {
     ready,
     newInstance,
-    SegmentedConnector,
+    StraightConnector,
     EdgePathEditor,
     EVENT_TAP,
-    initializeSegmentedConnectorEditors,
     AnchorLocations,
     EVENT_CANVAS_CLICK,
     ArrowOverlay
 } from "@jsplumbtoolkit/browser-ui"
-
-initializeSegmentedConnectorEditors()
 
 ready(() => {
 
@@ -58,9 +55,6 @@ ready(() => {
     const renderOptions = {
         zoomToFit:true,
         defaults:{
-            connector:{
-                type:SegmentedConnector.type
-            },
             anchor:AnchorLocations.AutoDefault
         },
         view:{
@@ -130,7 +124,7 @@ ready(() => {
     window.toggleConnectorSmoothing = () => {
         smooth = !smooth
         renderOptions.defaults.connector = {
-            type:SegmentedConnector.type,
+            type:StraightConnector.type,
             options:{
                 smooth
             }
